@@ -4,7 +4,7 @@ DoublyLinkedList::DoublyLinkedList() : front(nullptr), back(nullptr), size(0){
 
 }
 DoublyLinkedList::~DoublyLinkedList(){
-	while (!isEmpty)
+	while (!isEmpty())
 		popFront();
 }
 unsigned int DoublyLinkedList::getSize(){
@@ -35,7 +35,7 @@ void DoublyLinkedList::pushBack(int val){
 }
 void DoublyLinkedList::pushFront(int val){
 	Node* i = new Node;
-	i->val;
+	i->val = val;
 	i->next = i->prev = nullptr;
 	if (front){
 		i->next = front;

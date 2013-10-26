@@ -7,9 +7,11 @@ int main(){
 	dll.pushFront(11);
 	dll.pushFront(10);
 	dll.pushBack(13);
+	dll.pushBack(14);
+	dll.pushFront(9);
 	while (!dll.isEmpty()){
-		cout << "Element:" << dll.getFront() << endl;
-		dll.popFront();
+		cout << "Element:" << dll.getBack() << endl;
+		dll.popBack();
 	}
 	return 0;
 }

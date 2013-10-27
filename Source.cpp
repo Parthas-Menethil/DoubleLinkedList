@@ -10,8 +10,13 @@ int main(){
 	dll.pushBack(14);
 	dll.pushFront(9);
 	while (!dll.isEmpty()){
-		cout << "Element:" << dll.getBack() << endl;
+		cout << "[DLL]Element:" << dll.getBack() << endl;
 		dll.popBack();
+	}
+	int a[] = {55,66,77,88,99};
+	DoublyLinkedList dll2(a, a + 5);
+	for (DoublyLinkedList::iterator it = dll2.begin(); it != dll2.end(); ++it){
+		cout << "[DLL2]Element:" << *it << endl;
 	}
 	return 0;
 }

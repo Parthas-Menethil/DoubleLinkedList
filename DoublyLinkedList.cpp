@@ -3,6 +3,11 @@
 DoublyLinkedList::DoublyLinkedList() : front(nullptr), back(nullptr), size(0){
 
 }
+DoublyLinkedList::DoublyLinkedList(int* start, int* end){
+	for (start; start != end + 1; start++){
+		pushBack(*start);
+	}
+}
 DoublyLinkedList::~DoublyLinkedList(){
 	while (!isEmpty())
 		popFront();
@@ -76,4 +81,10 @@ void DoublyLinkedList::popFront(){
 		}
 		size--;
 	}
+}
+DoublyLinkedList::iterator DoublyLinkedList::begin(){
+	return iterator(front);
+}
+DoublyLinkedList::iterator DoublyLinkedList::end(){
+	return iterator(back);
 }
